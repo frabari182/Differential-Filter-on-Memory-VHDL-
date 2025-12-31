@@ -78,6 +78,8 @@ entity project_reti_logiche is
  );
 end project_reti_logiche;
 
+---
+
 ## Academic Context
 
 - **Course:** Reti Logiche  
