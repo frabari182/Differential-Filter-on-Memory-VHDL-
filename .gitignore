@@ -1,0 +1,41 @@
+# ==============================
+# IDE / Editor files (JetBrains)
+# ==============================
+.idea/
+*.iml
+misc.xml
+modules.xml
+vcs.xml
+
+# ==============================
+# VHDL / Simulation artifacts
+# ==============================
+*.cf
+*.vcd
+*.ghw
+*.fst
+*.wlf
+transcript
+work/
+work-obj*
+
+# ==============================
+# FPGA / Vivado artifacts
+# ==============================
+*.xpr
+*.runs/
+*.sim/
+*.cache/
+*.ip_user_files/
+*.srcs/
+*.hw/
+*.jou
+*.log
+*.dcp
+*.ltx
+
+# ==============================
+# OS / Misc
+# ==============================
+.DS_Store
+Thumbs.db
