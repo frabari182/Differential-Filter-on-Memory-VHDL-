@@ -19,10 +19,9 @@ back to memory under the control of a finite state machine (FSM).
 ## Authors
 
 👥 **Andrea Roberto Benvenuti**  
-Codice Persona: 10682511  
+andrea.benvenuti@mail.polimi.it
 
-👥 **Francesco Barillari**  
-Codice Persona: 10858068  
+👥 **Francesco Barillari**   
 
 **Instructor:** Prof. William Fornaciari
 
