@@ -1,56 +1,58 @@
 # Differential Filter on Memory — VHDL
 
-University project developed in VHDL for the design of a memory-mapped digital system.
-The module reads a sequence of signed bytes from memory, applies a differential filter,
-and writes the filtered output back to memory using a finite state machine (FSM).
+Final project developed in **VHDL** for the course **Reti Logiche** at Politecnico di Milano.
+The system implements a memory-mapped digital module that reads a sequence of signed
+bytes from memory, applies a differential filter, and writes the filtered output
+back to memory under the control of a finite state machine (FSM).
 
 ---
 
 ## Project Overview
 
-The system implements a discrete, clock-driven hardware module that interfaces with
-a single-port memory. Given a base address, it reads configuration data and an input
-sequence, computes a filtered version of the sequence, and stores the result in memory.
+The design implements a synchronous hardware module that interfaces with a single-port
+memory. Starting from a base address, the module reads configuration parameters and
+input data, performs a differential filtering operation, and stores the resulting
+sequence back into memory.
 
-The design focuses on:
-- correct memory interfacing
+The project focuses on:
 - FSM-based control logic
+- correct memory interfacing
 - signed arithmetic and saturation
-- compliance with a strict communication protocol
+- compliance with a fixed communication protocol
 
 ---
 
 ## Main Features
 
 - **Memory-Mapped Interface**
-  - Sequential read/write access to external memory
-  - Address generation managed internally by the FSM
+  - Sequential read and write access to external memory
+  - Address generation handled internally by the control logic
 
 - **Finite State Machine**
-  - Controls memory access, data loading, computation, and write-back
-  - Handles start, reset, and completion signaling (`i_start`, `o_done`)
+  - Coordinates memory access, computation, and write-back phases
+  - Handles reset, start, and completion signaling (`i_rst`, `i_start`, `o_done`)
 
 - **Differential Filtering**
   - Supports two filter configurations (order 3 or order 5)
-  - Filter selection controlled by a configuration bit read from memory
+  - Filter selection determined by a configuration bit read from memory
 
 - **Normalization and Saturation**
   - Output values normalized using shift-based approximations
-  - Saturation to signed 8-bit range (−128 to +127)
+  - Saturation applied to the signed 8-bit range (−128 to +127)
 
 ---
 
 ## Architecture
 
-The design is structured around:
-- a **control path** (FSM) managing the operational phases
-- a **data path** handling:
-  - sliding window of input samples
+The system is organized into:
+- a **control path**, implemented as a finite state machine
+- a **data path** that includes:
+  - a sliding window of input samples
   - coefficient loading
-  - multiply–accumulate computation
-  - normalization and saturation
+  - multiply–accumulate logic
+  - normalization and saturation stages
 
-Signed arithmetic is implemented using `numeric_std`.
+All signed arithmetic is implemented using the `numeric_std` library.
 
 ---
 
@@ -75,3 +77,23 @@ entity project_reti_logiche is
   o_mem_en   : out std_logic
  );
 end project_reti_logiche;
+
+## Academic Context
+
+- **Course:** Reti Logiche  
+- **Institution:** Politecnico di Milano  
+- **Academic Year:** 2024/2025  
+- **Final Grade:** 28/30  
+
+---
+
+## Authors
+
+👥 **Andrea Roberto Benvenuti**  
+Codice Persona: 10682511  
+
+👥 **Francesco Barillari**  
+Codice Persona: 10858068  
+
+**Instructor:** Prof. William Fornaciari
+
