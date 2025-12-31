@@ -78,24 +78,21 @@ entity project_reti_logiche is
  );
 end project_reti_logiche;
 
----
-
-## Academic Context
-
-- **Course:** Reti Logiche  
-- **Institution:** Politecnico di Milano  
-- **Academic Year:** 2024/2025  
-- **Final Grade:** 28/30  
-
----
-
-## Authors
-
-👥 **Andrea Roberto Benvenuti**  
-Codice Persona: 10682511  
-
-👥 **Francesco Barillari**  
-Codice Persona: 10858068  
-
-**Instructor:** Prof. William Fornaciari
-
+----------------------------------------------------------------------------------
+-- Academic Context
+--
+-- Course: Reti Logiche
+-- Institution: Politecnico di Milano
+-- Academic Year: 2024/2025
+-- Final Grade: 28/30
+--
+-- Authors
+--
+-- Andrea Roberto Benvenuti
+-- Codice Persona: 10682511
+--
+-- Francesco Barillari
+-- Codice Persona: 10858068
+--
+-- Instructor: Prof. William Fornaciari
+----------------------------------------------------------------------------------
